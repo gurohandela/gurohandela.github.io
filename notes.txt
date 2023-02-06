@@ -1,0 +1,38 @@
+
+Number 1 build a structure of how you are going to buil the page.
+Having this breaks the huge task of building the system to smaller tasks.
+
+Todos:
+1. Build the project
+- create folders 
+    - Image folder CHECK
+    - Link folder
+- adding files
+- connecting files
+
+2. Navigationbar:
+- 2links
+- name
+
+3. Portfolio item grid:
+- images
+- titles
+- descriptions
+- animations using javascript
+
+4. About page:
+- image 
+- split column layout
+- content
+
+Make a user-snippet for charactertistics you need 
+css-file is our styyle 
+div: properly manner you stuff. A specific spot on the page.
+Makes it possible to select something aswell. 
+Here you can specify class.
+You want to have the content here first, and then the design
+
+
+
+Notes on what means what:
+-     <meta name="viewport" content="width=device-width, initial-scale=1.0"> tells us that it can be displayed on every screen size.

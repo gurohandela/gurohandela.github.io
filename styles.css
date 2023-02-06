@@ -1,0 +1,78 @@
+/* Increase the global font size on larger screens */
+@media (min-width: 70em) {
+    body {
+        font-size: 130%; 
+    }
+}
+
+@font-face {
+    font-family: 'headingFont';
+    src: url('sansation_light.woff') format('woff2') ;
+}
+
+body {
+    font: 1em/150% Helvetica, Arial, sans-serif;
+    padding: 5em;
+    margin: 0 auto;
+    max-width: 90em;
+}
+
+
+/* h1 {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border: 1px solid black;
+} */
+
+nav {
+    background-color: #E5CD9A;
+    width: fit-content(20em);
+    align-items: center;
+}
+
+menu li, a:link {
+    font-family: Arial, Helvetica, sans;
+    display: inline-block;
+    padding: 8px 16px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: #F29580;
+} 
+a:hover {
+    color: #32598C;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    padding: 1em;
+    position: relative;
+    left: 15em;
+    top: 15em;
+}
+
+where {
+    h
+}
+
+.grid {
+    background-color: #D96666;   
+}
+
+.blockquote {
+    font-family:'Times New Roman', Times, serif;
+    font-size: medium;
+}
+.about_text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+* {
+    font-family: headingFont;
+}
+
