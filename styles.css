@@ -5,31 +5,36 @@
     }
 }
 
-@font-face {
-    font-family: 'headingFont';
-    src: url('sansation_light.woff') format('woff2') ;
-}
-
 body {
-    font: 1em/150% Helvetica, Arial, sans-serif;
     padding: 5em;
     margin: 0 auto;
     max-width: 90em;
 }
 
 
-/* h1 {
-    font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
-    border: 1px solid black;
-} */
+/* Text edits*/
+/* med font-face definerer font-family variabel navn*/
+@font-face {
+    font-family: headerFont;
+    src: url('sansation_light.woff');
+}
 
+h1 {
+    font-family: headerFont;
+    padding: 10px;
+}
+ 
+p {
+    font: 15px helvetica, Arial, sans-serif;
+} 
+
+
+/* Navigeringsmeny*/
 nav {
     background-color: #E5CD9A;
     width: fit-content(20em);
     align-items: center;
 }
-
 menu li, a:link {
     font-family: Arial, Helvetica, sans;
     display: inline-block;
@@ -39,12 +44,14 @@ menu li, a:link {
 }
 
 
+/* The page (a-link) in menu being visited */ 
 a:visited {
     color: #F29580;
 } 
 a:hover {
     color: #32598C;
 }
+
 
 img {
     max-width: 50%;
@@ -55,18 +62,7 @@ img {
     top: 15em;
 }
 
-where {
-    h
-}
 
-.grid {
-    background-color: #D96666;   
-}
-
-.blockquote {
-    font-family:'Times New Roman', Times, serif;
-    font-size: medium;
-}
 .about_text {
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
