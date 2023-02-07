@@ -16,7 +16,7 @@ body {
 /* med font-face definerer font-family variabel navn*/
 @font-face {
     font-family: headerFont;
-    src: url('sansation_light.woff');
+    src: url(sansation_light.woff);
 }
 
 h1 {
