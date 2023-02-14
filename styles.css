@@ -3,6 +3,12 @@
     body {
         font-size: 130%; 
     }
+    footer {
+        font-size: 130%;
+    }
+    header {
+        font-size: 130%;
+    }
 }
 
 body {
@@ -49,7 +55,7 @@ h2 {
 /*sets the color and size of the paragraphs. Same font as h1,h2*/
 p {
     font-size: small;
-    color: #F29580;
+    color: #F29580;   
 } 
 
 .about_text {
@@ -59,20 +65,21 @@ p {
     bottom: 30%;
     color:blanchedalmond;
     background-color: #32598C;
+    border-radius: 10px;
 }
 
 
 small {
     font-style: italic;
+    font-size: 12px;
     color: whitesmoke;
     position: absolute; /*fixed position within the footer object*/
     bottom: 0%;
-    right: 0%;
-    
+    right: 0%;  
 }
 
 footer {
-    background-color:#32598CF1;
+    background-color:#32598CF3;
     position: absolute;
     min-width: 100%; /*covers whole screen*/
     bottom:0%;
@@ -80,16 +87,16 @@ footer {
 }
 
 .some {
-    display: inline-flex;
-    padding: 1%;  
-}
-
-.some .somemenu, .somelink {
-    display: inline;
-    text-decoration: underline;
+    display: inline-block;
+    line-height: 18px;
+} .somemenu {
     list-style-type: none;
-    font-size: small;
+} .somelink {
+    font-size: 12px;
     color: whitesmoke;
+}
+.some.about_text {
+    background-color: none;
 }
 
 /* Navigeringsmeny*/
@@ -126,6 +133,7 @@ a:active {
     min-height: 120px;
     position: relative;
     left: 11px;
+    border-radius: 10px;
 }
 
 .slides {
