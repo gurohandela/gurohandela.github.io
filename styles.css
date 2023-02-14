@@ -11,8 +11,9 @@ body {
 }
 
 .grid {
-    display: inline-flex;
-    min-width: none;
+    display: inline-table;
+    justify-content: center;
+    margin: 20px;
 }
 
 /* Text edits*/
@@ -33,6 +34,18 @@ h1, h2, h3, p, a, .about_text, .some, small{
     color:#32598C;
 } 
 
+h2 {
+    font-style: italic;
+    font-size: small;
+}
+
+.where {
+    display: inline-block;
+    position: relative;
+    left: 30%;
+    top: 90%;
+}
+
 /*sets the color and size of the paragraphs. Same font as h1,h2*/
 p {
     font-size: small;
@@ -41,10 +54,9 @@ p {
 
 .about_text {
     display: inline-block;
-    min-width: 100%;
     font-size: medium;
     position: relative;
-    top:50%;
+    bottom: 30%;
     color:blanchedalmond;
     background-color: #32598C;
 }
@@ -109,7 +121,32 @@ a:active {
 }
 
 .pb {
-    max-width: 10pc;
-    height: auto;
-    margin: 15pc;
+    width: auto;
+    max-height: 120px;
+    min-height: 120px;
+    position: relative;
+    left: 11px;
+}
+
+.slides {
+    width: auto;
+    max-height: 120px;
+    min-height: 120px;
+}
+
+.sshowbutt_left, .sshowbutt_right{
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    padding: 15px;
+}
+
+.sshowbutt_right {
+    top:50%;
+    right: 0%;
+}
+
+.sshowbutt_left {
+    top: 50%;
+    left: 0%;
 }
