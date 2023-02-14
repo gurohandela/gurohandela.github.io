@@ -20,7 +20,16 @@ body {
 }
 
 h1 {
-    font-family: headerFont;
+    font-family: "Nunito Sans",
+        -apple-system,
+        ".SFNSText-Regular",
+        "San Francisco",
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
     padding: 10px;
 }
 
