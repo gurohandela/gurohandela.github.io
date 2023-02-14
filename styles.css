@@ -6,20 +6,19 @@
 }
 
 body {
-    padding: 5em;
-    margin: 0 auto;
-    max-width: 90em;
+    margin: 1 auto;
+    max-width: fit-content;
 }
 
+.grid {
+    display: inline-flex;
+    min-width: none;
+}
 
 /* Text edits*/
 /* med font-face definerer font-family variabel navn*/
-@font-face {
-    font-family: headerFont;
-    src: url(sansation_light.woff);
-}
-
-h1 {
+/* , edits both, but if it's reedited further down it overrules.*/
+h1, h2, h3, p, a, .about_text, .some, small{
     font-family: "Nunito Sans",
         -apple-system,
         ".SFNSText-Regular",
@@ -30,59 +29,84 @@ h1 {
         Helvetica,
         Arial,
         sans-serif;
-    padding: 10px;
-}
-
-h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #E5CD9A;
-    padding: 20%;
-}
-p {
-    font: 15px helvetica, Arial, sans-serif;
+    margin: 10px;
+    color:#32598C;
 } 
 
-
-/* Navigeringsmeny*/
-nav {
-    background-color: #E5CD9A;
-    width: fit-content(20em);
-    align-items: center;
-}
-menu li, a:link {
-    font-family: Arial, Helvetica, sans;
-    display: inline-block;
-    padding: 8px 16px;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-
-/* The page (a-link) in menu being visited */ 
-a:visited {
+/*sets the color and size of the paragraphs. Same font as h1,h2*/
+p {
+    font-size: small;
     color: #F29580;
 } 
-a:hover {
-    color: #32598C;
+
+.about_text {
+    font-size: medium;
+    color:blanchedalmond;
 }
+
+small {
+    font-style: italic;
+    color: whitesmoke;
+    position: absolute; /*fixed position within the footer object*/
+    bottom: 0%;
+    right: 0%;
+    
+}
+
+footer {
+    background-color:#32598CF1;
+    position: absolute;
+    min-width: 100%; /*covers whole screen*/
+    bottom:0%;
+    left:0%;
+}
+
+.some {
+    display: inline-flex;
+    padding: 1%;  
+}
+
+.some .somemenu, .somelink {
+    display: inline;
+    text-decoration: underline;
+    list-style-type: none;
+    font-size: small;
+    color: whitesmoke;
+}
+
+/* Navigeringsmeny*/
+header {
+    min-width: 100%;
+    align-items: center;
+    margin: 0%;
+}
+
+.navli, .nava {
+    display: inline-block;
+    justify-content: left;
+    text-decoration: none;   /*takes away the underline of links*/
+    list-style-type: none;
+    color:#32598C;
+    background-color: #F29580;
+}
+
+
+/* The page (a-link) in menu being visited */
+a:hover {
+    color:#E5CD9A;
+}
+a:active {
+    color: #F29580;
+}
+
+
 
 
 img {
     max-width: 50%;
     height: auto;
     padding: 1em;
-    position: relative;
+    position: center;
     left: 15em;
     top: 15em;
 }
-
-
-.about_text {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
-}
-
-* {
-    font-family: headingFont;
-}
-
