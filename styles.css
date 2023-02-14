@@ -40,9 +40,15 @@ p {
 } 
 
 .about_text {
+    display: inline-block;
+    min-width: 100%;
     font-size: medium;
+    position: relative;
+    top:50%;
     color:blanchedalmond;
+    background-color: #32598C;
 }
+
 
 small {
     font-style: italic;
@@ -80,6 +86,9 @@ header {
     align-items: center;
     margin: 0%;
 }
+.navli {
+    min-width: inherit;
+}
 
 .navli, .nava {
     display: inline-block;
@@ -99,14 +108,8 @@ a:active {
     color: #F29580;
 }
 
-
-
-
-img {
-    max-width: 50%;
+.pb {
+    max-width: 10pc;
     height: auto;
-    padding: 1em;
-    position: center;
-    left: 15em;
-    top: 15em;
+    margin: 15pc;
 }
