@@ -1,25 +1,89 @@
+* { /*selects _all_ elements*/
+    box-sizing:content-box; 
+}
+/* GLOBAL ADJUSTMENTS AND PROPER ORIENTING*/
+/* Remove default margin*/
+body {
+    margin: 0;
+}
+/* Correct block-display*/
+article,
+footer,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**Prevent modern browsers from displaying 'audio' without controls
+* Remove excess height in iOS5 dev. 
+**/
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden], template {
+    display: none;
+}
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+    background-color: transparent;
+}
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
 /* Increase the global font size on larger screens */
 @media (min-width: 70em) {
     body {
-        font-size: 130%; 
+        font-size: 100%; 
     }
-    footer {
-        font-size: 130%;
-    }
-    header {
-        font-size: 130%;
-    }
-}
-
-body {
-    margin: 1 auto;
-    max-width: fit-content;
-}
-
-.grid {
-    display: inline-table;
-    justify-content: center;
-    margin: 20px;
 }
 
 /* Text edits*/
@@ -36,20 +100,16 @@ h1, h2, h3, p, a, .about_text, .some, small{
         Helvetica,
         Arial,
         sans-serif;
-    margin: 10px;
-    color:#32598C;
 } 
 
 h2 {
     font-style: italic;
     font-size: small;
+    color:#32598C;
 }
 
 .where {
     display: inline-block;
-    position: relative;
-    left: 30%;
-    top: 90%;
 }
 
 /*sets the color and size of the paragraphs. Same font as h1,h2*/
@@ -59,80 +119,101 @@ p {
 } 
 
 .about_text {
-    display: inline-block;
-    font-size: medium;
-    position: relative;
-    bottom: 30%;
-    color:blanchedalmond;
-    background-color: #32598C;
+    font-size: 16px;
+    color:#32598C;
     border-radius: 10px;
 }
 
-
-small {
-    font-style: italic;
-    font-size: 12px;
-    color: whitesmoke;
-    position: absolute; /*fixed position within the footer object*/
-    bottom: 0%;
-    right: 0%;  
-}
-
+/* FOOTER - all design*/
 footer {
-    background-color:#32598CF3;
+    stroke: #F29580;
     position: absolute;
     min-width: 100%; /*covers whole screen*/
     bottom:0%;
     left:0%;
 }
+small {
+    font-size: 12px;
+    color:#F29580;
+    position: absolute;
+    /*fixed position within the footer object*/
+    bottom: 10px;
+    right: 15px;
+}
 
 .some {
     display: inline-block;
     line-height: 18px;
+    padding: 0em;
 } .somemenu {
     list-style-type: none;
 } .somelink {
     font-size: 12px;
-    color: whitesmoke;
-}
-.some.about_text {
-    background-color: none;
+    color:#F29580;
 }
 
-/* Navigeringsmeny*/
-header {
-    min-width: 100%;
+/* Navigeringsmeny – HEADER*/
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Header stuffs*/
+.my_header {
+    height: fit-content;
+    min-height: fit-content;
+    max-height: 100%;
+    padding: 40px 0 40px 0;
+}.nav {
+    display: flex;
+    position: sticky;
+    justify-items: space-between;
     align-items: center;
-    margin: 0%;
+    height: 60px;
+    top: 0;
+} .nav_list {
+    list-style-type: none; /*make sure you have this one, so you can make the list different*/
+    overflow: hidden;
+    margin-top: 5px; /*sa tittel og liste er pa linje*/
 }
-.navli {
-    min-width: inherit;
+/*alle nav_item orienteres fra overste i html til siste*/
+.nav_item {
+    float: left;
 }
-
-.navli, .nava {
-    display: inline-block;
-    justify-content: left;
-    text-decoration: none;   /*takes away the underline of links*/
-    list-style-type: none;
-    color:#32598C;
-    background-color: #F29580;
+/* a i nav_item skal se ut folgende: */
+.nav_item a {
+    display: inline;
+    color:#F29580;
+    text-align: right;
+    padding: 10px 20px;
+    text-decoration: none; /*take away the underline*/
 }
-
-
-/* The page (a-link) in menu being visited */
+/* The page (a-link) in menu being hovered over */
 a:hover {
-    color:#E5CD9A;
+    color:#32598C;
 }
-a:active {
-    color: #F29580;
+a::before {
+    color:#F29580;
+}
+
+.nav_title {
+    color:#F29580;
+    margin: 0px 30px;
+}
+
+/*Main content*/
+.main_content {
+    padding: 15px;
+    flex: 1; /*1 = fills whole space left if no flex value are given to children*/
+    overflow: auto;
 }
 
 .pb {
     width: auto;
     max-height: 120px;
     min-height: 120px;
-    position: relative;
-    left: 11px;
     border-radius: 10px;
 }
 
