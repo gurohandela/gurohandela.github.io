@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>All the light caught</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="slideshow.js"></script>
 </head>
 
 <body>
@@ -21,8 +22,28 @@
     </header>
     <div class="grid">
         <h2>
-            Olympus
+            Photo
         </h2>
+    </div>
+    <div class="img_slideshow_container">
+        <h3>Olympus</h3>
+        <p>A few years back I bought an Olympus XA2 at a second hand store. These are some of my favourites.</p>
+        <div class="slides">
+            <div class="numbertext">1/3</div>
+            <img class="slide_img" src="images/olympus/olympus1.jpg" />
+        </div>
+        <div class="slides">
+            <div class="numbertext">2/3</div>
+            <img class="slide_img" src="images/olympus/olympus2.jpg" />
+        </div>
+        <div class="slides">
+            <div class="numbertext">3/3</div>
+            <img class="slide_img" src="images/olympus/olympus3.jpg" />
+        </div>
+        <!-- &#10094/95 er piler :) -->
+        <a class="sshowbutt_prev" onclick="plusDivs(-1)">Previous</a>
+        <a class="sshowbutt_next" onclick="plusDivs(+1)">Next</a>
+        </div>
     </div>
 </body>
 

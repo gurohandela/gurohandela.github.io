@@ -247,18 +247,23 @@ a::before {
 
 .sshowbutt_prev, .sshowbutt_next{
     position: absolute;
+    padding-top: 40px;
+    padding-bottom: 40px;
     top: 50%;
     font-size: 12px;
     width: auto;
-    border-radius: 0 3px 3px 0;
     background-color: transparent;
     user-select: none;
 }
 
-/*Flytter next knapp for de er automatisk rett ved hverandre*/
+/*Flytter next knapp helt til hoyre*/
 .sshowbutt_next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    padding-left: 50px;
+}
+
+.sshowbutt_prev {
+    padding-right: 50px;
 }
 
 /* numbertext for bilder */
