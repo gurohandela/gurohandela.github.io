@@ -274,3 +274,33 @@ a::before {
     top: 10px;
     right: 0;
 }
+
+
+/* Projects.html*/
+.projects_list_container {
+    display: block;
+}
+
+.projects_list {
+    padding: 0;
+    list-style-type: none; /*make sure you have this one, so you can make the list different*/
+    margin: 5px;
+}
+
+.projects_li_item {
+    padding: 10px 0;
+    stroke: #F29580;
+    
+}
+
+/* a i nav_item skal se ut folgende: */
+.projects_li_item a {
+    color: #F29580;
+    text-align: right;
+    padding: 10px 20px;
+}
+
+.projects_li_item a:hover{
+    color:antiquewhite;
+    background-color: #32598CD4;
+}
