@@ -1,5 +1,5 @@
 * { /*selects _all_ elements*/
-    box-sizing:content-box; 
+    box-sizing:border-box; 
 }
 /* GLOBAL ADJUSTMENTS AND PROPER ORIENTING*/
 /* Remove default margin*/
@@ -89,7 +89,7 @@ svg:not(:root) {
 /* Text edits*/
 /* med font-face definerer font-family variabel navn*/
 /* , edits both, but if it's reedited further down it overrules.*/
-h1, h2, h3, p, a, .about_text, .some, small{
+h1, h2, h3, p, a, .about_text, .some, div, small{
     font-family: "Nunito Sans",
         -apple-system,
         ".SFNSText-Regular",
@@ -217,25 +217,39 @@ a::before {
     border-radius: 10px;
 }
 
-.slides {
-    width: auto;
-    max-height: 120px;
-    min-height: 120px;
+/*Drawings.html - img slideshow*/
+.img_slideshow_container {
+    max-width: 50%;
+    position: relative; /*makes sure the things inside stay close*/
+    margin: auto;
 }
 
-.sshowbutt_left, .sshowbutt_right{
+/*This decides the img size, scale down doesnt crop*/
+.slide_img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.sshowbutt_prev, .sshowbutt_next{
     position: absolute;
-    border: none;
-    background-color: transparent;
-    padding: 15px;
-}
-
-.sshowbutt_right {
-    top:50%;
-    right: 0%;
-}
-
-.sshowbutt_left {
     top: 50%;
-    left: 0%;
+    width: auto;
+    border-radius: 0 3px 3px 0;
+    background-color: transparent;
+    user-select: none;
+}
+
+/*Flytter next knapp for de er automatisk rett ved hverandre*/
+.sshowbutt_next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* numbertext for bilder */
+.numbertext {
+    color:#F29580;
+    position: absolute;
+    top: 10px;
+    right: 0;
 }
