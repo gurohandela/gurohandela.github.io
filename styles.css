@@ -115,59 +115,46 @@ h1, h2, h3, p, a, .about_text, .some, div, small{
 } 
 
 h1 {
-    font-weight: 200;
-}
-
-h2 {
-    color:#32598C;
-    margin: 0 30px 0;
-}
-
-h3 {
-    font-weight: lighter;
-}
-
-.where {
-    display: inline-block;
-}
-
-/*sets the color and size of the paragraphs. Same font as h1,h2*/
-p {
+    font-weight: 400;
+    margin: 1vw;
+} h2 {
+    margin: 1vw;
     font-size: 3vw; /*set all fonts to vw (view window)*/
+    font-weight: 400;
     color: #F29580;
-    margin: 10px; 
-} 
+} h2 a {
+    color:#F29580;
+} h3 {
+    font-weight: 200;
+    font-size: 1.5vw;
+}
+p {
+    margin: 1vw;
+    font-size: 1.5vw;
+    color:#F29580;
+}
 
 /* FOOTER - all design*/
 footer {
     min-width: 100%; /*covers whole screen*/
 }
 small {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color:#F29580;
     float: right;
     margin: 10px;
 }
 .some {
     display: inline-block;
-    line-height: 18px;
     padding: 0em;
 } .somemenu {
     list-style-type: none;
 } .somelink {
-    font-size: 2vw;
+    font-size: 1.2vw;
     color:#F29580;
 }
 
 /* Navigeringsmeny – HEADER*/
-body {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/*Header stuffs*/
 .my_header {
     height: fit-content;
     min-height: fit-content;
@@ -217,7 +204,7 @@ a::before {
     width: 100%;
     height: fit-content;
     top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 50vw;
 }
 
 .home_nav_list {
@@ -260,11 +247,13 @@ button:hover {
 /* About.html */
 .about_container {
     max-width: 100%;
-    margin: 15px;
+    margin: 5%;
     left:30%;
 } .pb {
+    margin-left: 3%;
+    margin-bottom: 10%;
+    max-width: 20%;
     border-radius: 10%;
-    max-width: 30%;
     object-fit: scale-down;
 } .about_text {
     max-width: 100%;
@@ -284,40 +273,31 @@ button:hover {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
-    border: 1px solid #32598C;
 }
 
 .sshowbutt_prev, .sshowbutt_next{
     position: absolute;
-    padding-top: 40px;
+    padding-top: 40px; /*for a gi linken storre klikkeflate*/
     padding-bottom: 40px;
-    top: 50%;
+    top: 40%;
     font-size: 2vw;
     width: auto;
     background-color: transparent;
     user-select: none;
 }
-
 /*Flytter next knapp helt til hoyre*/
 .sshowbutt_next {
     right: 0;
     padding-left: 50px;
-}
-
-.sshowbutt_prev {
+} .sshowbutt_prev {
     padding-right: 50px;
 }
-
-/* numbertext for bilder */
 .numbertext {
+    float: right;
     color:#F29580;
-    position: absolute;
-    font-size: 1.5vw;
-    top: 10px;
-    right: 0;
+    font-weight: 200;
+    font-size: 1.2vw;
 }
-
-
 /* Projects.html*/
 .projects_list_container {
     display: block;
