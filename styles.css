@@ -14,6 +14,7 @@ nav,
 section,
 summary {
     display: block;
+    overflow: auto;
 }
 
 /**Prevent modern browsers from displaying 'audio' without controls
@@ -209,35 +210,40 @@ a::before {
 
 /*HOME _nav*/
 .home_nav {
-    display: inline-block;
-    justify-items: space-between;
-    align-items: center;
-    height: fit-content;
+    display: flex-box;
     width: 100%;
+    height: fit-content;
     top: 0;
 }
 
 .home_nav_list {
-    width: 100%;
     list-style-type: none; /*make sure you have this one, so you can make the list different*/
 }
 
 /*FLOAT: alle nav_item orienteres fra overste i html til siste og at orienteringen er horisontal*/
-.home_nav_item {
-    margin: 25px;
-    background-color: #32598C;
+.home_nav_item{
+    margin: 1px;
+    height: 60px;
+    outline: 1px solid #F29580;
+    vertical-align: middle;
 }
 
 /* a i nav_item skal se ut folgende: */
-.home_nav_item a {
+.home_nav_item button {
+    width: 100%;
+    height: 100%;
     color: #F29580;
-    padding: 10px 0; /*top&bottom left&right*/
+    background-color: white;
     text-decoration: none; /*take away the underline*/
+    text-align: left;
+    font-size: 18px;
+    border-style: none;
 }
 
 /* The page (a-link) in menu being hovered over */
-a:hover {
+button:hover {
     color: #32598C;
+    background-color: #F29580;
 }
 
 /*Main content*/
