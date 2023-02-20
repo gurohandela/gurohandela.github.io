@@ -27,7 +27,7 @@
             Photo
         </h2>
     </div>
-    <div class="img_slideshow_container">
+    <div id="slideshow1" class="img_slideshow_container">
         <div>
         <h3>Olympus</h3>
         <div class="slides">
@@ -43,14 +43,14 @@
             <img class="slide_img" src="images/olympus/olympus3.jpg" />
         </div>
         <!-- &#10094/95 er piler :) -->
-        <h3><a class="sshowbutt_prev" onclick="plusDivs(-1)">Previous</a></h3>
-        <h3><a class="sshowbutt_next" onclick="plusDivs(+1)">Next</a></h3>
+        <h3><a class="sshowbutt_prev" onclick="plusSlides(-1)">Previous</a></h3>
+        <h3><a class="sshowbutt_next" onclick="plusSlides(1)">Next</a></h3>
         </div>
         <h3>A few years back I bought an Olympus XA2 camera at a second hand store. <br>These are some of my favourites.</h3>
     </div>
     <div class="img_slideshow_container">
-        <div>
-            <h3>Light</h3>
+        <h3>Light</h3>
+        <div id="slideshow2">
             <div class="slides">
                 <div class="numbertext">1/4</div>
                 <img class="slide_img" src="images/light/light1.jpeg" />
@@ -67,12 +67,11 @@
                 <div class="numbertext">4/4</div>
                 <img class="slide_img" src="images/light/light4.jpeg" />
             </div>
-            <!-- &#10094/95 er piler :) -->
-            <h3><a class="sshowbutt_prev" onclick="plusDivs(-1)">Previous</a></h3>
-            <h3><a class="sshowbutt_next" onclick="plusDivs(+1)">Next</a></h3>
         </div>
-        <h3>I catch light with my phone. On walls.
-        </h3>
+            <!-- &#10094/95 er piler :) -->
+            <h3><a class="sshowbutt_prev" onclick="plusSlides(-1, 2)">Previous</a></h3>
+            <h3><a class="sshowbutt_next" onclick="plusSlides(1, 2)">Next</a></h3>
+        <h3>I catch light with my phone. On walls </h3>
     </div>
 </div>
 </body>
