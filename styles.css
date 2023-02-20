@@ -1,5 +1,16 @@
-* { /*selects _all_ elements*/
-    box-sizing:border-box; 
+/*Define the max-width as breaking point to change the width of a special object*/
+@media screen and (max-width: 620px) {
+    /*for mobile phones */
+    .img_slideshow_container, .slide_img, .about_container {
+        max-width: 100%;
+    }
+}
+
+* {
+    /*selects _all_ elements*/
+    box-sizing: border-box;
+    overflow: auto;
+    /*add scroll to block elements with a specified height, if that is necessary to access content*/
 }
 /* GLOBAL ADJUSTMENTS AND PROPER ORIENTING*/
 /* Remove default margin*/
@@ -122,28 +133,21 @@ h3 {
 
 /*sets the color and size of the paragraphs. Same font as h1,h2*/
 p {
-    font-size: small;
+    font-size: 3vw; /*set all fonts to vw (view window)*/
     color: #F29580;
     margin: 10px; 
 } 
 
 /* FOOTER - all design*/
 footer {
-    stroke: #F29580;
-    position: absolute;
     min-width: 100%; /*covers whole screen*/
-    bottom:0%;
-    left:0%;
 }
 small {
-    font-size: 12px;
+    font-size: 1.5vw;
     color:#F29580;
-    position: absolute;
-    /*fixed position within the footer object*/
-    bottom: 10px;
-    right: 15px;
+    float: right;
+    margin: 10px;
 }
-
 .some {
     display: inline-block;
     line-height: 18px;
@@ -151,7 +155,7 @@ small {
 } .somemenu {
     list-style-type: none;
 } .somelink {
-    font-size: 12px;
+    font-size: 2vw;
     color:#F29580;
 }
 
@@ -171,17 +175,16 @@ body {
     padding: 40px 0 40px 0;
 }.nav {
     display: flex;
-    position: sticky;
+    position: sticky; /*this means that the header should follow when the page gets longer and longer*/
     justify-items: space-between;
     align-items: center;
     height: 60px;
     top: 0;
 } .nav_list {
-    position: absolute;
     list-style-type: none; /*make sure you have this one, so you can make the list different*/
     overflow: hidden;
     margin-top: 5px; /*sa tittel og liste er pa linje*/
-    right:0;
+    float: right;
 }
 /*alle nav_item orienteres fra overste i html til siste*/
 .nav_item {
@@ -192,7 +195,7 @@ body {
     display: inline;
     color:#F29580;
     text-align: right;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
     text-decoration: none; /*take away the underline*/
 }
 /* The page (a-link) in menu being hovered over */
@@ -214,6 +217,7 @@ a::before {
     width: 100%;
     height: fit-content;
     top: 0;
+    padding-bottom: 50px;
 }
 
 .home_nav_list {
@@ -223,7 +227,7 @@ a::before {
 /*FLOAT: alle nav_item orienteres fra overste i html til siste og at orienteringen er horisontal*/
 .home_nav_item{
     margin: 1px;
-    height: 60px;
+    height: 6vw;
     outline: 1px solid #F29580;
     vertical-align: middle;
 }
@@ -236,7 +240,7 @@ a::before {
     background-color: white;
     text-decoration: none; /*take away the underline*/
     text-align: left;
-    font-size: 18px;
+    font-size: 2vw;
     border-style: none;
 }
 
@@ -255,24 +259,22 @@ button:hover {
 
 /* About.html */
 .about_container {
-    position: relative;
+    max-width: 100%;
     margin: 15px;
     left:30%;
-}
-.pb {
+} .pb {
     border-radius: 10%;
-    height: 20%;
-    width: 20%;
+    max-width: 30%;
     object-fit: scale-down;
-}
-
-.about_text {
-    width: 20%;
+} .about_text {
+    max-width: 100%;
+    font-size: 1.5vw;
+    color:#F29580;
 }
 
 /*Drawings.html - img slideshow*/
 .img_slideshow_container {
-    max-width: 50%;
+    max-width: 50%; /*better to use max-width propery: the img scales down if it has to*/ 
     position: relative; /*makes sure the things inside stay close*/
     margin: auto;
 }
@@ -282,6 +284,7 @@ button:hover {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
+    border: 1px solid #32598C;
 }
 
 .sshowbutt_prev, .sshowbutt_next{
@@ -289,7 +292,7 @@ button:hover {
     padding-top: 40px;
     padding-bottom: 40px;
     top: 50%;
-    font-size: 12px;
+    font-size: 2vw;
     width: auto;
     background-color: transparent;
     user-select: none;
@@ -309,7 +312,7 @@ button:hover {
 .numbertext {
     color:#F29580;
     position: absolute;
-    font-size: 12px;
+    font-size: 1.5vw;
     top: 10px;
     right: 0;
 }

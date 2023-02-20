@@ -7,6 +7,10 @@ function openAbout() {
     window.location='about.html';
 }
 
+function openDrawings() {
+    window.location = 'drawings.html';
+}
+
 function openPhoto() {
     window.location = 'photo.html';
 
