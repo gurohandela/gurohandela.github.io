@@ -1,5 +1,5 @@
 /*Define the max-width as breaking point to change the width of a special object*/
-@media screen and (max-width: 620px) {
+@media screen, (max-width: 620px) {
     /*for mobile phones */
     .img_slideshow_container, .slide_img, .about_container {
         max-width: 100%;
@@ -16,6 +16,16 @@
 /* Remove default margin*/
 body {
     margin: 0;
+    font-family: "Nunito Sans",
+        -apple-system,
+        ".SFNSText-Regular",
+        "San Francisco",
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 /* Correct block-display*/
 article,
@@ -98,21 +108,6 @@ svg:not(:root) {
     }
 }
 
-/* Text edits*/
-/* med font-face definerer font-family variabel navn*/
-/* , edits both, but if it's reedited further down it overrules.*/
-h1, h2, h3, p, a, .about_text, .some, div, small{
-    font-family: "Nunito Sans",
-        -apple-system,
-        ".SFNSText-Regular",
-        "San Francisco",
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
-} 
 
 h1 {
     font-weight: 400;
@@ -268,6 +263,11 @@ button:hover {
     margin: auto;
 }
 
+.olympus_slides,
+.light_slides {
+    display: none;
+}
+
 /*This decides the img size, scale down doesnt crop*/
 .slide_img {
     height: 100%;
@@ -275,22 +275,28 @@ button:hover {
     object-fit: scale-down;
 }
 
-.sshowbutt_prev, .sshowbutt_next{
+.prev, .next{
+    cursor: pointer; /*forteller at det gar a klikke*/
     position: absolute;
-    padding-top: 40px; /*for a gi linken storre klikkeflate*/
-    padding-bottom: 40px;
-    top: 40%;
+    padding: 16px;
+    top: 50%;
     font-size: 2vw;
     width: auto;
     background-color: transparent;
     user-select: none;
 }
 /*Flytter next knapp helt til hoyre*/
-.sshowbutt_next {
+.next {
     right: 0;
     padding-left: 50px;
-} .sshowbutt_prev {
+} .prev {
     padding-right: 50px;
+}
+
+/*Fade mellom bildene*/
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1}
 }
 .numbertext {
     float: right;
