@@ -105,31 +105,30 @@ svg:not(:root) {
 /* Increase the global font size on larger screens */
 @media (min-width: 70em) {
     body {
-        font-size: 100%; 
+        font-size: 130%; 
+    }
+} @media (max-width: 620em) {
+    body {
+        font-size: 80%;
     }
 }
 
-
+/*Font: use em for statisk str. vw for scaleable str mellom screens. body 100% font-size for samme font-size mellom browsere*/
 h1 {
     font-weight: 400;
-    margin: 1vw;
+    margin: 1em;
 } h2 {
-    margin: 1vw;
-    font-size: 3vw; /*set all fonts to vw (view window)*/
-    font-size: 3vmin;
+    font-size: 3em; /*set all fonts to vw (view window)*/
     font-weight: 400;
     color:#F29580;
 } h2 a {
     color:#F29580;
 } h3 {
     font-weight: 200;
-    font-size: 1.5vmin;
-    font-size: 1.5vw;
+    font-size: 2em;
 }
 p {
-    margin: 1vw;
-    font-size: 1.5vmin;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     color:#F29580;
 }
 
@@ -138,8 +137,7 @@ footer {
     min-width: 100%; /*covers whole screen*/
 }
 small {
-    font-size: 2vmin;
-    font-size: 1.2vw;
+    font-size: 1.2em;
     color:#F29580;
     float: right;
     margin: 10px;
@@ -150,7 +148,7 @@ small {
 } .somemenu {
     list-style-type: none;
 } .somelink {
-    font-size: 1.2vw;
+    font-size: 1.2em;
     color:#F29580;
 }
 
@@ -179,7 +177,7 @@ small {
 }
 /* a i nav_item skal se ut folgende: */
 .nav_item a {
-    font-size: 1.5vw;
+    font-size: 2em;
     display: inline;
     color:#F29580;
     text-align: right;
@@ -214,8 +212,8 @@ a::before {
 
 /*FLOAT: alle nav_item orienteres fra overste i html til siste og at orienteringen er horisontal*/
 .home_nav_item{
-    margin: 1px;
-    height: 6vw;
+    margin: 1em;
+    height: 6em;
     outline: 1px solid #F29580;
     vertical-align: middle;
 }
@@ -228,7 +226,7 @@ a::before {
     background-color: white;
     text-decoration: none; /*take away the underline*/
     text-align: left;
-    font-size: 2vw;
+    font-size: 2em;
     border-style: none;
 }
 
@@ -240,7 +238,7 @@ button:hover {
 
 /*Main content*/
 .main_content {
-    padding: 15px;
+    padding: 1.5em;
     flex: 1; /*1 = fills whole space left if no flex value are given to children*/
     overflow: auto;
 }
@@ -251,14 +249,14 @@ button:hover {
     margin: 5%;
     left:30%;
 } .pb {
-    margin-left: 3%;
+    margin-left: 5%;
     margin-bottom: 10%;
     max-width: 20%;
     border-radius: 10%;
     object-fit: scale-down;
 } .about_text {
     max-width: 100%;
-    font-size: 1.5vw;
+    font-size: 1.5m;
     color:#F29580;
 }
 
@@ -279,15 +277,12 @@ button:hover {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
-    border: 0.05vw solid #32598C;
 }
 
 .prev, .next{
     cursor: pointer; /*forteller at det gar a klikke*/
-    position: absolute;
-    padding: 16px;
-    top: 50%;
-    font-size: 2vw;
+    float:inline-end;
+    font-size: 1em;
     width: auto;
     background-color: transparent;
     user-select: none;
@@ -299,43 +294,53 @@ button:hover {
 } .prev {
     padding-right: 50px;
 }
-
-/*Fade mellom bildene*/
-@keyframes fade {
-    from {opacity: .4;}
-    to {opacity: 1}
-}
 .numbertext {
     float: right;
     color:#F29580;
     font-weight: 200;
-    font-size: 1.2vw;
+    font-size: 0.8em;
+    margin-bottom: 0.4em;
 }
+
+/*Fade mellom bildene*/
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 /* Projects.html*/
 .projects_list_container {
     display: block;
-}
-
-.projects_list {
+} .projects_list {
     padding: 0;
     list-style-type: none; /*make sure you have this one, so you can make the list different*/
     margin: 5px;
-}
-
-.projects_li_item {
+}.projects_li_item {
     padding: 10px 0;
     stroke: #F29580;
     
 }
-
 /* a i nav_item skal se ut folgende: */
 .projects_li_item a {
     color: #F29580;
     text-align: right;
     padding: 10px 20px;
-}
-
-.projects_li_item a:hover{
+} .projects_li_item a:hover{
     color:antiquewhite;
     background-color: #32598CD4;
+}
+
+
+/*Whitespace canvas so all pages are the same size*/
+.whitespace {
+    padding: 20em;
+}
+
+#ws_where {
+    background-color: antiquewhite;
 }
