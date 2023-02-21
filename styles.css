@@ -1,7 +1,7 @@
 /*Define the max-width as breaking point to change the width of a special object*/
-@media screen, (max-width: 620px) {
+@media screen and (max-width: 620px) {
     /*for mobile phones */
-    .img_slideshow_container, .slide_img, .about_container {
+    * {
         max-width: 100%;
     }
 
@@ -109,14 +109,13 @@ svg:not(:root) {
     }
 } @media (max-width: 620em) {
     body {
-        font-size: 80%;
+        font-size: 70%;
     }
 }
 
 /*Font: use em for statisk str. vw for scaleable str mellom screens. body 100% font-size for samme font-size mellom browsere*/
 h1 {
     font-weight: 400;
-    margin: 1em;
 } h2 {
     font-size: 3em; /*set all fonts to vw (view window)*/
     font-weight: 400;
@@ -134,18 +133,17 @@ p {
 
 /* FOOTER - all design*/
 footer {
+    display: inline-block;
     min-width: 100%; /*covers whole screen*/
 }
-small {
+#copyright {
     font-size: 1.2em;
     color:#F29580;
     float: right;
-    margin: 10px;
+    margin: 0.5em;
 }
-.some {
-    display: inline-block;
-    padding: 0em;
-} .somemenu {
+
+.somemenu {
     list-style-type: none;
 } .somelink {
     font-size: 1.2em;
@@ -157,13 +155,12 @@ small {
     height: fit-content;
     min-height: fit-content;
     max-height: 100%;
-    padding: 40px 0 40px 0;
 }.nav {
     display: flex;
     position: sticky; /*this means that the header should follow when the page gets longer and longer*/
     justify-items: space-between;
     align-items: center;
-    height: 60px;
+    height: 6em;
     top: 0;
 } .nav_list {
     list-style-type: none; /*make sure you have this one, so you can make the list different*/
@@ -203,7 +200,7 @@ a::before {
     width: 100%;
     height: fit-content;
     top: 0;
-    padding-bottom: 50vw;
+    padding-bottom: 40em;
 }
 
 .home_nav_list {
@@ -214,7 +211,7 @@ a::before {
 .home_nav_item{
     margin: 1em;
     height: 6em;
-    outline: 1px solid #F29580;
+    outline: 0.1em solid #F29580;
     vertical-align: middle;
 }
 
@@ -223,7 +220,7 @@ a::before {
     width: 100%;
     height: 100%;
     color: #F29580;
-    background-color: white;
+    background-color: transparent;
     text-decoration: none; /*take away the underline*/
     text-align: left;
     font-size: 2em;
@@ -245,18 +242,17 @@ button:hover {
 
 /* About.html */
 .about_container {
+    display: inline-block;
     max-width: 100%;
     margin: 5%;
     left:30%;
 } .pb {
-    margin-left: 5%;
-    margin-bottom: 10%;
-    max-width: 20%;
+    max-width: 20em;
     border-radius: 10%;
     object-fit: scale-down;
 } .about_text {
     max-width: 100%;
-    font-size: 1.5m;
+    font-size: 1.5em;
     color:#F29580;
 }
 
@@ -281,7 +277,6 @@ button:hover {
 
 .prev, .next{
     cursor: pointer; /*forteller at det gar a klikke*/
-    float:inline-end;
     font-size: 1em;
     width: auto;
     background-color: transparent;
@@ -289,7 +284,7 @@ button:hover {
 }
 /*Flytter next knapp helt til hoyre*/
 .next {
-    right: 0;
+    float: right;
     padding-left: 50px;
 } .prev {
     padding-right: 50px;
