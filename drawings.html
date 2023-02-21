@@ -39,35 +39,35 @@
         <div>
             <div class="img_slideshow_container">
             <h3>Mousepad Food Signs</h3>
-            <div style="border: 0.05vw solid #32598C;">
-                <div class="slides">
+            <div id="draw_slideshow1">
+                <div class="fs_slides">
                     <div class="numbertext">1/6</div>
                     <img class="slide_img" src="images/foodsigns/fsdrawn1.jpeg"/>
                 </div>
-                <div class="slides">
+                <div class="fs_slides">
                     <div class="numbertext">2/6</div>
                     <img class="slide_img" src="images/foodsigns/fsdrawn2.jpeg" />
                 </div>
-                <div class="slides">
+                <div class="fs_slides">
                     <div class="numbertext">3/6</div>
                     <img class="slide_img" src="images/foodsigns/fsdrawn3.jpeg" />
                 </div>
-                <div class="slides">
+                <div class="fs_slides">
                     <div class="numbertext">4/6</div>
                     <img class="slide_img" src="images/foodsigns/fsdrawn4.jpeg" />
                 </div>
-                <div class="slides">
+                <div class="fs_slides">
                     <div class="numbertext">5/6</div>
                     <img class="slide_img" src="images/foodsigns/fsdrawn5.jpeg" />
                 </div>
-                <div class="slides">
+                <div class="fs_slides">
                     <div class="numbertext">6/6</div>
                     <img class="slide_img" src="images/foodsigns/fsdrawn6.jpeg" />
                 </div>
+            </div>
                 <!-- &#10094/94 er piler :) -->
-                <h3><a class="sshowbutt_prev" onclick="plusDivs(-1)">Previous</a></h3>
-                <h3><a class="sshowbutt_next" onclick="plusDivs(+1)">Next</a></h3>
-                </div>
+                <h3><a class="prev" onclick="plusSlides(-1, 0)">Previous</a></h3>
+                <h3><a class="next" onclick="plusSlides(1, 0)">Next</a></h3>
                 <h3>These drawings I did on my mousepad. The goal was to draw attention to the drinks we sold at <a
                         href="https://www.trevarefabrikken.no/">Trevarefabrikken</a></h3>
             </div>
@@ -91,6 +91,29 @@
         </div>
         <small>copyright © Guro Handeland</small>
     </footer>
+
+    <script>
+        var slideIndex = [1]; //blir automatisk storre pga for-loop i initialiseSlides
+        var slidesIDList = ["fs_slides"];
+        //showSlides(1, 1); //slideshow2
+        showSlides(1, 0);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let slides = document.getElementsByClassName(slidesIDList[no]); //henter hele listen med slides
+            if (typeof slideIndex[no] === 'undefined') { slideIndex[no] = 1; } //showslides corrects itself
+            if (n > slides.length) { slideIndex[no] = 1 } //dersom n er storre enn det antallet img i slides er starter vi pa starten igjen
+            if (n < 1) { slideIndex[no] = slides.length } //dersom n er mindre enn det slideindeks (org 1) sa kan slideindex bli lengden pa slides - vi er pa indeks 0 og skal til siste indeks
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; //ikke vis noenting for hver slide som finnes 
+            }
+            slides[slideIndex[no] - 1].style.display = "block"; //men vis det slidesIndeks er pa (minus 1 fordi det ma vi)
+        }
+    </script>
 </body>
 
 </html>

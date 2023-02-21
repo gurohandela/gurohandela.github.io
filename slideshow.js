@@ -1,8 +1,8 @@
-var slideIndex = [0, 0]; //blir automatisk storre pga for-loop i initialiseSlides
+var slideIndex = [1, 1]; //blir automatisk storre pga for-loop i initialiseSlides
 var slidesIDList = ["olympus_slides", "light_slides"];
 initialiseSlides();
-showSlides(1, 0); //slideshow1
-showSlides(1, 1); //slideshow2
+window.onload = showSlides(1, 0); //slideshow1
+//showSlides(1, 1); //slideshow2
 
 /*function initialiseSlides() { //for hver slide-element i idlist adder vi 1
     for (var i = 0; i < slidesIDList.length; i++) {
@@ -24,3 +24,12 @@ function showSlides(n, no) {
     }
     slides[slideIndex[no]-1].style.display = "block"; //men vis det slidesIndeks er pa (minus 1 fordi det ma vi)
 }
+
+//Den viser ingenting for man trykker
+//Den viser indeks 0 nar man trykker pa next
+//Riktig piler viser rikitg slides. 
+//Hvis man tar vekk my_slides display none vises alle bildene pa en gang
+//For du deretter kan trykke next og kun 1 slide vises av gangen
+//Hvis man tar vekk showSlides pa starten er det ingen forskjell
+//Hvis jeg kaller window.onload = showSlides(1, 0) er det ingen forskjell
+//Flytte hele koden inn i html fungerer! Nederst i Body.
