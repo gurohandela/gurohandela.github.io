@@ -99,37 +99,36 @@
     </div>
     <hr class="little_whitespace" id="ws_photo">
     </hr>
-<!--
         <div>
             <div class="img_slideshow_container">
                 <h3>Coffee</h3>
                 <div id="draw_slideshow2">
                     <div class="hindo_slides">
-                        <div class="numbertext">1/5</div>
-                        <img class="slide_img" src="images/hindo/ArcticE.jpeg" />
+                        <div class="numbertext">1/4</div>
+                        <img class="slide_img" src="images/hindo/ArcticEspresso.jpg" />
                     </div>
                     <div class="hindo_slides">
-                        <div class="numbertext">2/5</div>
-                        <img class="slide_img" src="images/foodsigns/Colombia.jpeg" />
+                        <div class="numbertext">2/4</div>
+                        <img class="slide_img" src="images/hindo/Colombia.jpg" />
                     </div>
                     <div class="hindo_slides">
-                        <div class="numbertext">3/5</div>
-                        <img class="slide_img" src="images/foodsigns/Brasil.jpeg" />
+                        <div class="numbertext">3/4</div>
+                        <img class="slide_img" src="images/hindo/Brasil.jpg" />
                     </div>
                     <div class="hindo_slides">
                         <div class="numbertext">4/4</div>
-                        <img class="slide_img" src="images/foodsigns/Etiopia.jpeg" />
+                        <img class="slide_img" src="images/hindo/Etiopia.jpg" />
                     </div>
         
-                    <!-- &#10094/94 er piler :)
-                    <h3><a class="prev" onclick="plusSlides(-1, 0)">Previous</a></h3>
-                    <h3><a class="next" onclick="plusSlides(1, 0)">Next</a></h3>
+                    <!-- &#10094/94 er piler :)-->
+                    <h3><a class="prev" onclick="pluisSlides(-1, 2)">Previous</a></h3>
+                    <h3><a class="next" onclick="plusSlides(1, 2)">Next</a></h3>
                 </div>
-                <h3>These ae inspired by the origin countries of the coffee beans, and the nature around Henningsvær. Made to give attention to the coffee we sold at <a
-                        href="https://www.trevarefabrikken.no/">Trevarefabrikken</a> provided by <a href="https://hindokaffe.no/" target="_blank">Hindø Kaffebrenneri</a></h3>
+                <h4>These ae inspired by the origin countries of the coffee beans, and the nature around Henningsvær. Made to give attention to the coffee we sold at <a
+                        href="https://www.trevarefabrikken.no/">Trevarefabrikken</a>. In cooperation with <a href="https://hindokaffe.no/" target="_blank">Hindø Kaffebrenneri</a></h4>
+                <small><i>06.2022</i></small>
             </div>
         </div>
-    -->
 
         <canvas class="whitespace"></canvas>
     </div>
@@ -148,7 +147,8 @@
 
     <script>
         var slideIndex = [1];//blir automatisk storre pga for-loop i initialiseSlides
-        var slidesIDList = ["fs_slides", "i&e_slides"];
+        var slidesIDList = ["fs_slides", "i&e_slides", "hindo_slides"];
+        showSlides(1, 2); //slideshow3
         showSlides(1, 1); //slideshow2
         showSlides(1, 0);
 
