@@ -283,9 +283,9 @@ button:hover {
 /*Drawings.html - img slideshow*/
 .img_slideshow_container {
     max-width: 50%; /*better to use max-width propery: the img scales down if it has to*/ 
-    /*position: relative; /*makes sure the things inside stay close*/
+    height: fit-content;
+    position: relative; /*makes sure the things inside stay close*/
     margin: auto;
-    background-color: beige;
 }
 .olympus_slides,
 .light_slides {
@@ -297,22 +297,21 @@ button:hover {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
-} .prev, .next{
+} 
+ .prev, .next{
     cursor: pointer; /*forteller at det gar a klikke*/
     font-size: 1em;
-    width: auto;
-    background-color:aqua;
     user-select: none;
-}
-/*Flytter next knapp helt til hoyre*/
+    position: absolute;
+    top: 70%; /*ikke en perfekt losning,fungerer pa riktig str bilde*/
+} 
 .next {
-    float: right;
-}
-.numbertext {
+    right: 0.5em;
+} .numbertext {
     float: right;
     color:#F29580;
     font-weight: 200;
-    font-size: 0.8em;
+    font-size: 1em;
     margin-bottom: 0.4em;
 }
 
@@ -347,4 +346,14 @@ button:hover {
 #ws_where {
     background-color: antiquewhite;
     min-width: 100%;
+}
+
+#ws_photo {
+    min-width: 100%;
+    margin-top: 5em;
+    border-style: none;
+    height: 0.1em;
+    color:#F29580;
+    background-color: #F29580;
+
 }
