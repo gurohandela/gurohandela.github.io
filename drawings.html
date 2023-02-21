@@ -29,12 +29,11 @@
             <p>I run a drawing class in Henningsvær, Lofoten. Here, I have noticed that drawing has a meditative effect on people. I believe everyone can draw, it is just a matter of perspective and patience.</p>
             <p>I have also found drawing useful in my work as a cafemanager.</p>
         </div>
-        <br>
-        <br>
-        <br>
+
+        <canvas></canvas>
         <div>
             <div class="img_slideshow_container">
-            <h3>Mousepad Food Signs</h3>
+            <h3>Digital Mousepad Food Signs</h3>
             <div id="draw_slideshow1">
                 <div class="fs_slides">
                     <div class="numbertext">1/6</div>
@@ -65,12 +64,72 @@
                     <h3><a class="prev" onclick="plusSlides(-1, 0)">Previous</a></h3>
                     <h3><a class="next" onclick="plusSlides(1, 0)">Next</a></h3>
                 </div>
-                <h3>These drawings I did on my mousepad. The goal was to draw attention to the drinks we sold at <a
-                        href="https://www.trevarefabrikken.no/">Trevarefabrikken</a></h3>
+                <h4>Catch essence in simplicity. The goal with these was to draw attention to the drinks and coffees we sold at <a
+                        href="https://www.trevarefabrikken.no/">Trevarefabrikken</a>.</h4>
+                <small><i>08.2022</i></small>
+
             </div>
         </div>
                 <hr class="little_whitespace" id="ws_photo">
-                </hr>
+    </hr>
+    <div>
+        <div class="img_slideshow_container">
+            <h3>Hoping Right Hands</h3>
+            <div id="draw_slideshow2">
+                <div class="i&e_slides">
+                    <div class="numbertext">1/3</div>
+                    <img class="slide_img" src="images/i&e/pencil.jpeg" />
+                </div>
+                <div class="i&e_slides">
+                    <div class="numbertext">2/3</div>
+                    <img class="slide_img" src="images/i&e/digital.jpeg" />
+                </div>
+                <div class="i&e_slides">
+                    <div class="numbertext">2/3</div>
+                    <img class="slide_img" src="images/i&e/digital.jpeg" />
+                </div>
+    
+                <!-- &#10094/94 er piler :) -->
+                <h3><a class="prev" onclick="plusSlides(-1, 1)">Previous</a></h3>
+                <h3><a class="next" onclick="plusSlides(1, 1)">Next</a></h3>
+            </div>
+            <h4>As a gift for their wedding day, I made these hands for my sister and now brother in law. It is now an A1 print on their living room wall.</h4> 
+            <small><i>14.05.2022</i></small>
+        </div>
+    </div>
+    <hr class="little_whitespace" id="ws_photo">
+    </hr>
+<!--
+        <div>
+            <div class="img_slideshow_container">
+                <h3>Coffee</h3>
+                <div id="draw_slideshow2">
+                    <div class="hindo_slides">
+                        <div class="numbertext">1/5</div>
+                        <img class="slide_img" src="images/hindo/ArcticE.jpeg" />
+                    </div>
+                    <div class="hindo_slides">
+                        <div class="numbertext">2/5</div>
+                        <img class="slide_img" src="images/foodsigns/Colombia.jpeg" />
+                    </div>
+                    <div class="hindo_slides">
+                        <div class="numbertext">3/5</div>
+                        <img class="slide_img" src="images/foodsigns/Brasil.jpeg" />
+                    </div>
+                    <div class="hindo_slides">
+                        <div class="numbertext">4/4</div>
+                        <img class="slide_img" src="images/foodsigns/Etiopia.jpeg" />
+                    </div>
+        
+                    <!-- &#10094/94 er piler :)
+                    <h3><a class="prev" onclick="plusSlides(-1, 0)">Previous</a></h3>
+                    <h3><a class="next" onclick="plusSlides(1, 0)">Next</a></h3>
+                </div>
+                <h3>These ae inspired by the origin countries of the coffee beans, and the nature around Henningsvær. Made to give attention to the coffee we sold at <a
+                        href="https://www.trevarefabrikken.no/">Trevarefabrikken</a> provided by <a href="https://hindokaffe.no/" target="_blank">Hindø Kaffebrenneri</a></h3>
+            </div>
+        </div>
+    -->
 
         <canvas class="whitespace"></canvas>
     </div>
@@ -88,9 +147,9 @@
     </footer>
 
     <script>
-        var slideIndex = [1]; //blir automatisk storre pga for-loop i initialiseSlides
-        var slidesIDList = ["fs_slides"];
-        //showSlides(1, 1); //slideshow2
+        var slideIndex = [1];//blir automatisk storre pga for-loop i initialiseSlides
+        var slidesIDList = ["fs_slides", "i&e_slides"];
+        showSlides(1, 1); //slideshow2
         showSlides(1, 0);
 
         function plusSlides(n, no) {

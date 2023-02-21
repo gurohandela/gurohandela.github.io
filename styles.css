@@ -306,7 +306,7 @@ button:hover {
     top: 70%; /*ikke en perfekt losning,fungerer pa riktig str bilde*/
 } 
 .next {
-    right: 0.5em;
+    right: 0;
 } .numbertext {
     float: right;
     color:#F29580;
@@ -348,7 +348,8 @@ button:hover {
 
 #ws_photo {
     min-width: 100%;
-    margin-top: 5em;
+    margin-top: 10em;
+    margin-bottom: 10em;;
     border-style: none;
     height: 0.1em;
     color:#F29580;
