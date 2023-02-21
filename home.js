@@ -20,4 +20,7 @@ function openProjects() {
     window.location = 'projects.html';
 }
 
+function openWhere() {
+    window.location = 'where.html';
+}
 

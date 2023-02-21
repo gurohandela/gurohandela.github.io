@@ -240,13 +240,37 @@ button:hover {
     overflow: auto;
 }
 
+.grid {
+   max-width: 100%;
+   margin: 5%;
+   left:30%;
+}
+
 /* About.html */
 .about_container {
-    display: inline-block;
-    max-width: 100%;
-    margin: 5%;
-    left:30%;
-} .pb {
+    display: flex; /*Make the setup for 2 column*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+} .about_column_1, .about_column_2 {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    flex-basis: auto;
+}
+
+/*Fra columns to rows when screen gets small*/
+@media screen and (min-width: 800px) {
+    .about_column_1 {
+        flex: 1;
+    } .about_column_2 {
+        flex: 2;
+    }
+}
+.about_column_1 {
+    justify-content: center;
+}
+.pb {
     max-width: 20em;
     border-radius: 10%;
     object-fit: scale-down;
@@ -259,10 +283,10 @@ button:hover {
 /*Drawings.html - img slideshow*/
 .img_slideshow_container {
     max-width: 50%; /*better to use max-width propery: the img scales down if it has to*/ 
-    position: relative; /*makes sure the things inside stay close*/
+    /*position: relative; /*makes sure the things inside stay close*/
     margin: auto;
+    background-color: beige;
 }
-
 .olympus_slides,
 .light_slides {
     display: none;
@@ -273,21 +297,16 @@ button:hover {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
-}
-
-.prev, .next{
+} .prev, .next{
     cursor: pointer; /*forteller at det gar a klikke*/
     font-size: 1em;
     width: auto;
-    background-color: transparent;
+    background-color:aqua;
     user-select: none;
 }
 /*Flytter next knapp helt til hoyre*/
 .next {
     float: right;
-    padding-left: 50px;
-} .prev {
-    padding-right: 50px;
 }
 .numbertext {
     float: right;
@@ -295,17 +314,6 @@ button:hover {
     font-weight: 200;
     font-size: 0.8em;
     margin-bottom: 0.4em;
-}
-
-/*Fade mellom bildene*/
-@keyframes fade {
-    from {
-        opacity: .4;
-    }
-
-    to {
-        opacity: 1
-    }
 }
 
 /* Projects.html*/
@@ -338,4 +346,5 @@ button:hover {
 
 #ws_where {
     background-color: antiquewhite;
+    min-width: 100%;
 }
