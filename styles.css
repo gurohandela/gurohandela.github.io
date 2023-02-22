@@ -303,11 +303,17 @@ button:hover {
     font-size: 1em;
     user-select: none;
     position: absolute;
-    top: 70%; /*ikke en perfekt losning,fungerer pa riktig str bilde*/
+    top: 50%; /*ikke en perfekt losning,fungerer pa riktig str bilde*/
+    margin-top: -22px;
 } 
 .next {
     right: 0;
-} .numbertext {
+} 
+.prev:hover, .next:hover {
+    color:#F29580;
+}
+
+.numbertext {
     float: right;
     color:#F29580;
     font-weight: 200;
