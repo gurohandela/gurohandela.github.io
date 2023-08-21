@@ -152,6 +152,9 @@ footer {
 
 /* Navigeringsmeny – HEADER*/
 .my_header {
+    max-width: 100%;
+    margin: 5%;
+    left: 30%;
     height: fit-content;
     min-height: fit-content;
     max-height: 100%;
