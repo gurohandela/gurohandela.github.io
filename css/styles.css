@@ -236,7 +236,8 @@ button:hover {
 /*Main content*/
 .main_content {
     padding: 1.5em;
-    flex: 1; /*1 = fills whole space left if no flex value are given to children*/
+    flex: 1;
+        /*1 = fills whole space left if no flex value are given to children*/
     overflow: auto;
 }
 
