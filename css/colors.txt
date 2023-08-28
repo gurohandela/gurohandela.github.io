@@ -1,0 +1,7 @@
+h1: #BF5B04
+h2: #D98E04
+
+p: #2E5159
+links: #9BB1BF
+
+background: #D9B391
