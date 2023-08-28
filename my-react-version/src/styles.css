@@ -1,0 +1,368 @@
+/*Define the max-width as breaking point to change the width of a special object*/
+@media screen and (max-width: 620px) {
+    /*for mobile phones */
+    * {
+        max-width: 100%;
+    }
+
+}
+
+* {
+    /*selects _all_ elements*/
+    box-sizing: border-box;
+    overflow: auto;
+    /*add scroll to block elements with a specified height, if that is necessary to access content*/
+}
+/* GLOBAL ADJUSTMENTS AND PROPER ORIENTING*/
+/* Remove default margin*/
+body {
+    margin: 0;
+    font-family: "Nunito Sans",
+        -apple-system,
+        ".SFNSText-Regular",
+        "San Francisco",
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+/* Correct block-display*/
+article,
+footer,
+menu,
+nav,
+section,
+summary {
+    display: block;
+    overflow: auto;
+}
+
+/**Prevent modern browsers from displaying 'audio' without controls
+* Remove excess height in iOS5 dev. 
+**/
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden], template {
+    display: none;
+}
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+    background-color: transparent;
+}
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Increase the global font size on larger screens */
+@media (min-width: 70em) {
+    body {
+        font-size: 130%; 
+    }
+} @media (max-width: 620em) {
+    body {
+        font-size: 70%;
+    }
+}
+
+/*Font: use em for statisk str. vw for scaleable str mellom screens. body 100% font-size for samme font-size mellom browsere*/
+h1 {
+    font-weight: 400;
+} h2 {
+    font-size: 3em; /*set all fonts to vw (view window)*/
+    font-weight: 400;
+    color:#F29580;
+} h2 a {
+    color:#F29580;
+} h3 {
+    font-weight: 200;
+    font-size: 2em;
+}
+p {
+    font-size: 1.5em;
+    color:#F29580;
+}
+
+/* FOOTER - all design*/
+footer {
+    display: inline-block;
+    min-width: 100%; /*covers whole screen*/
+}
+#copyright {
+    font-size: 1.2em;
+    color:#F29580;
+    float: right;
+    margin: 0.5em;
+}
+
+.somemenu {
+    list-style-type: none;
+} .somelink {
+    font-size: 1.2em;
+    color:#F29580;
+}
+
+/* Navigeringsmeny – HEADER*/
+.my_header {
+    max-width: 100%;
+    margin: 5%;
+    left: 30%;
+    height: fit-content;
+    min-height: fit-content;
+    max-height: 100%;
+}.nav {
+    display: flex;
+    position: sticky; /*this means that the header should follow when the page gets longer and longer*/
+    justify-items: space-between;
+    align-items: center;
+    height: 6em;
+    top: 0;
+} .nav_list {
+    list-style-type: none; /*make sure you have this one, so you can make the list different*/
+    overflow: hidden;
+    margin-top: 5px; /*sa tittel og liste er pa linje*/
+    float: right;
+}
+/*alle nav_item orienteres fra overste i html til siste*/
+.nav_item {
+    float: left;
+}
+/* a i nav_item skal se ut folgende: */
+.nav_item a {
+    font-size: 2em;
+    display: inline;
+    color:#F29580;
+    text-align: right;
+    padding: 1vw 2vw;
+    text-decoration: none; /*take away the underline*/
+}
+/* The page (a-link) in menu being hovered over */
+a:hover {
+    color:#32598C;
+}
+a::before {
+    color:#F29580;
+}
+
+.nav_title {
+    color:#F29580;
+    margin: 0px 30px;
+}
+
+/*HOME _nav*/
+.home_nav {
+    display: flex-box;
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    padding-bottom: 40em;
+}
+
+.home_nav_list {
+    list-style-type: none; /*make sure you have this one, so you can make the list different*/
+}
+
+/*FLOAT: alle nav_item orienteres fra overste i html til siste og at orienteringen er horisontal*/
+.home_nav_item{
+    margin: 1em;
+    height: 6em;
+    outline: 0.1em solid #F29580;
+    vertical-align: middle;
+}
+
+/* a i nav_item skal se ut folgende: */
+.home_nav_item button {
+    width: 100%;
+    height: 100%;
+    color: #F29580;
+    background-color: transparent;
+    text-decoration: none; /*take away the underline*/
+    text-align: left;
+    font-size: 2em;
+    border-style: none;
+}
+
+/* The page (a-link) in menu being hovered over */
+button:hover {
+    color: #32598C;
+    background-color: #F29580;
+}
+
+/*Main content*/
+.main_content {
+    padding: 1.5em;
+    flex: 1;
+        /*1 = fills whole space left if no flex value are given to children*/
+    overflow: auto;
+}
+
+.grid {
+   max-width: 100%;
+   margin: 5%;
+   left:30%;
+}
+
+/* About.html */
+.about_container {
+    display: flex; /*Make the setup for 2 column*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+} .about_column_1, .about_column_2 {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    flex-basis: auto;
+}
+
+/*Fra columns to rows when screen gets small*/
+@media screen and (min-width: 800px) {
+    .about_column_1 {
+        flex: 1;
+    } .about_column_2 {
+        flex: 2;
+    }
+}
+.about_column_1 {
+    justify-content: center;
+}
+.pb {
+    max-width: 20em;
+    border-radius: 10%;
+    object-fit: scale-down;
+} .about_text {
+    max-width: 100%;
+    font-size: 1.5em;
+    color:#F29580;
+}
+
+/*Drawings.html - img slideshow*/
+.img_slideshow_container {
+    max-width: 50%; /*better to use max-width propery: the img scales down if it has to*/ 
+    height: fit-content;
+    position: relative; /*makes sure the things inside stay close*/
+    margin: auto;
+}
+.olympus_slides,
+.light_slides {
+    display: none;
+}
+
+/*This decides the img size, scale down doesnt crop*/
+.slide_img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+} 
+ .prev, .next{
+    cursor: pointer; /*forteller at det gar a klikke*/
+    font-size: 1em;
+    user-select: none;
+    position: absolute;
+    top: 50%; /*ikke en perfekt losning,fungerer pa riktig str bilde*/
+    margin-top: -22px;
+} 
+.next {
+    right: 0;
+} 
+.prev:hover, .next:hover {
+    color:#F29580;
+}
+
+.numbertext {
+    float: right;
+    color:#F29580;
+    font-weight: 200;
+    font-size: 1em;
+    margin-bottom: 0.4em;
+}
+
+/* Projects.html*/
+.projects_list_container {
+    display: inline;
+} .projects_list {
+    padding: 0;
+    list-style-type: none; /*make sure you have this one, so you can make the list different*/
+} .projects_li_item {
+    margin: 2em 0;
+}
+/* a i nav_item skal se ut folgende: */
+.projects_li_item a {
+    padding: auto;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #F29580;
+} .projects_li_item a:hover{
+    color:antiquewhite;
+    background-color: #32598CD4;
+}
+
+
+/*Whitespace canvas so all pages are the same size*/
+.whitespace {
+    padding: 20em;
+}
+
+#ws_where {
+    background-color: antiquewhite;
+    min-width: 100%;
+}
+
+#ws_photo {
+    min-width: 100%;
+    margin-top: 10em;
+    margin-bottom: 10em;;
+    border-style: none;
+    height: 0.1em;
+    color:#F29580;
+    background-color: #F29580;
+
+}
