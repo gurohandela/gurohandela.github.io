@@ -1,5 +1,6 @@
 function openPage(page) {
-    window.location = "../pages/about.html";
+    window.location = "../pages/" + page + ".html";
+    console.log("Page: "+ page);
 }
 
 
