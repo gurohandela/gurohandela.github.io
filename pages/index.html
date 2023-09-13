@@ -5,8 +5,8 @@
     <!--Set the viewport in order to make the site responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Guro Handeland - Home</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/home.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="js/navigation.js"></script>
 </head>
 <body>
     <header class="my_header">
@@ -22,12 +22,12 @@
         </div>
         <div class="home_nav">
             <nav class="home_nav_list">
-                <li class="home_nav_item"><button onClick="openHome();">Home</button></li>
-                <li class="home_nav_item"><button onClick="openAbout();">About</button></li>
-                <li class="home_nav_item"><button onClick="openDrawings();">Drawings</button></li>
-                <li class="home_nav_item"><button onClick="openPhoto();">Photo</button></li>
-                <li class="home_nav_item"><button onClick="openProjects();">Projects</button></li>
-                <li class="home_nav_item"><button onClick="openWhere();">Whereabouts</button></li>
+                <li class="home_nav_item"><button id="home" onClick="openPage('home');">Home</button></li>
+                <li class="home_nav_item"><button id="about" onClick="openPage('about');">About</button></li>
+                <li class="home_nav_item"><button id="drawings" onClick="openPage('drawings');">Drawings</button></li>
+                <li class="home_nav_item"><button id="photo" onClick="openPage(photo);">Photo</button></li>
+                <li class="home_nav_item"><button id="porjects" onClick="openPage(projects);">Projects</button></li>
+                <li class="home_nav_item"><button id="where" onClick="openPage(where);">Whereabouts</button></li>
             </nav>
         </div>
     </div>

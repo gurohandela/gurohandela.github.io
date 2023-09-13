@@ -1,13 +1,3 @@
-/*Define the max-width as breaking point to change the width of a special object*/
-@media screen and (max-width: 620px) {
-
-    /*for mobile phones */
-    * {
-        max-width: 100%;
-    }
-
-}
-
 * {
     /*selects _all_ elements*/
     box-sizing: border-box;
@@ -33,7 +23,6 @@ body {
 
 /* Correct block-display*/
 article,
-footer,
 menu,
 nav,
 section,
@@ -147,16 +136,15 @@ p {
 
 /* FOOTER - all design*/
 footer {
-    display: inline-block;
-    min-width: 100%;
-    /*covers whole screen*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
 }
 
 #copyright {
     font-size: 1.2em;
     color: #F29580;
-    float: right;
-    margin: 0.5em;
 }
 
 .somemenu {
@@ -278,8 +266,7 @@ button:hover {
 
 .grid {
     max-width: 100%;
-    margin: 5%;
-    left: 30%;
+    margin: 2rem;
 }
 
 /* About.html */
@@ -299,16 +286,6 @@ button:hover {
     flex-basis: auto;
 }
 
-/*Fra columns to rows when screen gets small*/
-@media screen and (min-width: 800px) {
-    .about_column_1 {
-        flex: 1;
-    }
-
-    .about_column_2 {
-        flex: 2;
-    }
-}
 
 .about_column_1 {
     justify-content: center;
@@ -328,12 +305,12 @@ button:hover {
 
 /*Drawings.html - img slideshow*/
 .img_slideshow_container {
-    max-width: 50%;
+    max-width:100%;
     /*better to use max-width propery: the img scales down if it has to*/
     height: fit-content;
     position: relative;
     /*makes sure the things inside stay close*/
-    margin: auto;
+    margin: 2rem;
 }
 
 .olympus_slides,
@@ -346,27 +323,6 @@ button:hover {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
-}
-
-.prev,
-.next {
-    cursor: pointer;
-    /*forteller at det gar a klikke*/
-    font-size: 1em;
-    user-select: none;
-    position: absolute;
-    top: 50%;
-    /*ikke en perfekt losning,fungerer pa riktig str bilde*/
-    margin-top: -22px;
-}
-
-.next {
-    right: 0;
-}
-
-.prev:hover,
-.next:hover {
-    color: #F29580;
 }
 
 .numbertext {
@@ -425,5 +381,27 @@ button:hover {
     height: 0.1em;
     color: #F29580;
     background-color: #F29580;
+    
+}
 
+
+
+/*Define the max-width as breaking point to change the width of a special object*/
+@media screen and (max-width: 620px) {
+    
+    /*for mobile phones */
+    * {
+        max-width: 100%;
+    }
+    
+}
+/*Fra columns to rows when screen gets small*/
+@media screen and (min-width: 800px) {
+    .about_column_1 {
+        flex: 1;
+    }
+
+    .about_column_2 {
+        flex: 2;
+    }
 }

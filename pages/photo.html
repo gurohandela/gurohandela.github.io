@@ -4,82 +4,88 @@
     <meta charset="UTF-8">
     <!--Set the viewport in order to make the site responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All the light caught</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/slideshow.js"></script>
+    <title>Me - Guro Handeland</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    </link>
+    <script src="../js/header.js"></script>
 </head>
-
 <body>
     <header class="my_header">
         <div class="nav">
             <nav class="nav_list">
-                <li class="nav_item"><a class="active" href="index.html">Home</a></li>
-                <li class="nav_item"><a href="about.html">About</a></li>
-                <li class="nav_item"><a href="drawings.html">Drawings</a></li>
-                <li class="nav_item"><a href="photo.html">Photo</a></li>
-                <li class="nav_item"><a href="projects.html">Projects</a></li>
-                <li class="nav_item"><a href="where.html">Whereabouts</a></li>
+                <li class="nav_item"><a class="active" href="/pages/index.html">Home</a></li>
+                <li class="nav_item"><a href="/pages/about.html">About</a></li>
+                <li class="nav_item"><a href="/pages/drawings.html">Drawings</a></li>
+                <li class="nav_item"><a href="/pages/photo.html">Photo</a></li>
+                <li class="nav_item"><a href="/pages/projects.html">Projects</a></li>
+                <li class="nav_item"><a href="/pages/where.html">Whereabouts</a></li>
             </nav>
         </div>
     </header>
+    
     <div class="grid">
         <h2>
             Photo
         </h2>
             <p>I take photos for inspiration. And for the memories.</p>
-        </div>
+        <hr class="little_whitespace" id="ws_photo"></hr>
 
+        <h3>Olympus</h3>
+        <h4>A few years back I bought an Olympus XA2 camera at a second hand store. <br>These are some of my favourites.</h4>
+        <small><i>2022-2023</i></small>
         <div class="img_slideshow_container">
-            <h3>Olympus</h3>
             <div id="slideshow1">
                 <div class="olympus_slides">
                     <div class="numbertext">1/3</div>
-                    <img class="slide_img" src="images/olympus/olympus1.JPG" />
+                    <img onClick="plusSlides(-1,0)" class="slide_img" src="../images/olympus/olympus1.JPG" />
                 </div>
                 <div class="olympus_slides">
                     <div class="numbertext">2/3</div>
-                    <img class="slide_img" src="images/olympus/olympus2.JPG" />
-                </div>
+                        <img onClick="plusSlides(-1,0)" class="slide_img" src="../images/olympus/olympus2.JPG" />
+                    </div>
                 <div class="olympus_slides">
                     <div class="numbertext">3/3</div>
-                    <img class="slide_img" src="images/olympus/olympus3.JPG" />
+                    <img onClick="plusSlides(-1,0)"class="slide_img" src="../images/olympus/olympus3.JPG" />
                 </div>
             </div>
-            <!-- &#10094/95 er piler :) -->
-            <h3><a class="prev" onclick="plusSlides(-1, 0)">Previous</a></h3>
-            <h3><a class="next" onclick="plusSlides(1, 0)">Next</a></h3>
-            <h4>A few years back I bought an Olympus XA2 camera at a second hand store. <br>These are some of my favourites.</h4>
-            <small><i>2022</i></small>
         </div>
         <hr class="little_whitespace" id="ws_photo"></hr>
+        <h3>Light</h3>
+        <h4>I catch light with my iPhone 12mini. To remember how good good times are.</h4>
+        <small><i>2021 – 2022</i></small>
         <div class="img_slideshow_container">
-            <h3>Light</h3>
             <div id="slideshow2"> 
                 <div class="light_slides">
-                    <div class="numbertext">1/4</div>
-                    <img class="slide_img" src="images/light/light1.jpeg" />
+                    <p class="numbertext">1/4</p>
+                    <img onClick="plusSlides(-1,1)" class="slide_img" src="../images/light/light1.jpeg" />
                 </div>
                 <div class="light_slides">
-                    <div class="numbertext">2/4</div>
-                    <img class="slide_img" src="images/light/light2.jpeg" />
+                    <p class="numbertext">2/4</p>
+                    <img onClick="plusSlides(-1,1)" class="slide_img" src="../images/light/light2.jpeg" />
                 </div>
                 <div class="light_slides">
-                    <div class="numbertext">3/4</div>
-                    <img class="slide_img" src="images/light/light3.jpeg" />
+                    <p class="numbertext">3/4</p>
+                    <img onClick="plusSlides(-1,1)" class="slide_img" src="../images/light/light3.jpeg" />
                 </div>
                 <div class="light_slides">
-                    <div class="numbertext">4/4</div>
-                    <img class="slide_img" src="images/light/light4.jpeg" />
+                    <p class="numbertext">4/4</p>
+                    <img onClick="plusSlides(-1,1)" class="slide_img" src="../images/light/light4.jpeg" />
                 </div>
-                <!-- &#10094/95 er piler :) -->
-                <h3><a class="prev" onclick="plusSlides(-1, 1)">Previous</a></h3>
-                <h3><a class="next" onclick="plusSlides(1, 1)">Next</a></h3>
+                
             </div>
-            <h4>I catch light with my iphone12mini </h4>
-            <small><i>2021 – 2022</i></small>
         </div>
     </div>
     <canvas class="whitespace"></canvas>
+    <footer>
+        <menu class="somemenu">
+            <text class="about_text">Find me on</text>
+            <li><a href="https://www.instagram.com/gurogreier/" class="somelink" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/guro-handeland-740171156/" class="somelink"
+                    target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/guro.handeland/" class="somelink" target="_blank">Facebook</a></li>
+        </menu>
+        <small id="copyright">copyright © Guro Handeland</small>
+    </footer>
 <script>
     var slideIndex = [1, 1]; //blir automatisk storre pga for-loop i initialiseSlides
     var slidesIDList = ["olympus_slides", "light_slides"]; //det er kun her du trenger a legge til navn pa nye lister
