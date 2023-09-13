@@ -301,15 +301,12 @@ button:hover {
     
 }
 
-
 /*This decides the img size, scale down doesnt crop*/
 .slide_img {
-    height: 30rem;
+    height: 20rem;
     width: 100%;
     object-fit: scale-down;
 }
-
-
 
 .numbertext {
     float: right;
