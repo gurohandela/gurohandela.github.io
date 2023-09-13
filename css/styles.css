@@ -293,22 +293,23 @@ button:hover {
 }
 
 /*Drawings.html - img slideshow*/
-.img_slideshow_container {
-    max-width: 25rem;
+.img_slideshow_container{
+    max-width: 100%;
     /*makes sure the things inside stay close*/
     margin: 2rem;
     padding: 1rem;
-    border: solid #F29580;
     
 }
 
 
 /*This decides the img size, scale down doesnt crop*/
 .slide_img {
-    height: 100%;
+    height: 30rem;
     width: 100%;
     object-fit: scale-down;
 }
+
+
 
 .numbertext {
     float: right;
@@ -317,35 +318,6 @@ button:hover {
     font-size: 1em;
     margin-bottom: 0.4em;
 }
-
-/* Projects.html*/
-.projects_list_container {
-    display: inline;
-}
-
-.projects_list {
-    padding: 0;
-    list-style-type: none;
-    /*make sure you have this one, so you can make the list different*/
-}
-
-.projects_li_item {
-    margin: 2em 0;
-}
-
-/* a i nav_item skal se ut folgende: */
-.projects_li_item a {
-    padding: auto;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #F29580;
-}
-
-.projects_li_item a:hover {
-    color: antiquewhite;
-    background-color: #32598CD4;
-}
-
 
 /*Whitespace canvas so all pages are the same size*/
 .whitespace {
