@@ -269,6 +269,7 @@ button:hover {
     margin: 2rem;
 }
 
+
 /* About.html */
 .about_container {
     display: flex;
@@ -305,18 +306,14 @@ button:hover {
 
 /*Drawings.html - img slideshow*/
 .img_slideshow_container {
-    max-width:100%;
-    /*better to use max-width propery: the img scales down if it has to*/
-    height: fit-content;
-    position: relative;
+    max-width: 25rem;
     /*makes sure the things inside stay close*/
     margin: 2rem;
+    padding: 1rem;
+    border: solid #F29580;
+
 }
 
-.olympus_slides,
-.light_slides {
-    display: none;
-}
 
 /*This decides the img size, scale down doesnt crop*/
 .slide_img {
