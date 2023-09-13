@@ -95,18 +95,6 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-/* Increase the global font size on larger screens */
-@media (min-width: 70em) {
-    body {
-        font-size: 130%;
-    }
-}
-
-@media (max-width: 620em) {
-    body {
-        font-size: 70%;
-    }
-}
 
 /*Font: use em for statisk str. vw for scaleable str mellom screens. body 100% font-size for samme font-size mellom browsere*/
 h1 {
@@ -311,7 +299,7 @@ button:hover {
     margin: 2rem;
     padding: 1rem;
     border: solid #F29580;
-
+    
 }
 
 
@@ -415,7 +403,7 @@ button:hover {
 .app_img {
     max-height: 25rem;
     margin: 5px;
-
+    
 }
 
 
@@ -434,8 +422,20 @@ button:hover {
     .about_column_1 {
         flex: 1;
     }
-
+    
     .about_column_2 {
         flex: 2;
+    }
+}
+/* Increase the global font size on larger screens */
+@media (min-width: 70em) {
+    body {
+        font-size: 130%;
+    }
+}
+
+@media (max-width: 620em) {
+    body {
+        font-size: 70%;
     }
 }
