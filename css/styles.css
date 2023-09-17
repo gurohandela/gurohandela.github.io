@@ -277,20 +277,20 @@ button:hover {
     /*Make the setup for 2 column*/
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
 }
 
 .pb {
     max-height: 20rem;
-    border-radius: 10%;
-    margin: 1rem;;
+    border-radius: 1rem;
     object-fit: scale-down;
 }
 
 .about_text {
     max-width: 100%;
-    font-size: 1.5em;
     color: #F29580;
+    margin: 1rem;
 }
 
 /*Drawings.html - img slideshow*/
