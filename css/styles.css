@@ -115,6 +115,13 @@ h2 a {
 h3 {
     font-weight: 200;
     font-size: 2em;
+    color: #F29580;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #F29580;
 }
 
 p {
