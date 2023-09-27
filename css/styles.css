@@ -112,6 +112,7 @@ h2 a {
     color: #F29580;
 }
 
+
 h3 {
     font-weight: 200;
     font-size: 2em;
@@ -166,7 +167,7 @@ footer {
     position: sticky;
     /*this means that the header should follow when the page gets longer and longer*/
     justify-items: space-between;
-    align-items: center;
+    align-items: left;
     height: 6em;
     top: 0;
 }
@@ -175,9 +176,7 @@ footer {
     list-style-type: none;
     /*make sure you have this one, so you can make the list different*/
     overflow: hidden;
-    margin-top: 5px;
-    /*sa tittel og liste er pa linje*/
-    float: right;
+    margin-top: 1rem;
 }
 
 /*alle nav_item orienteres fra overste i html til siste*/
@@ -190,7 +189,7 @@ footer {
     font-size: 2em;
     display: inline;
     color: #F29580;
-    text-align: right;
+    text-align: left;
     padding: 1vw 2vw;
     text-decoration: none;
     /*take away the underline*/
@@ -198,7 +197,13 @@ footer {
 
 /* The page (a-link) in menu being hovered over */
 a:hover {
-    color: #32598C;
+    color: white;
+    background-color: #F29580;
+}
+
+p::selection{
+    color: white;
+    background-color: #F29580;
 }
 
 a::before {
@@ -211,18 +216,11 @@ a {
     /*take away the underline*/
 }
 
-.nav_title {
-    color: #F29580;
-    margin: 0px 30px;
-}
-
 /*HOME _nav*/
 .home_nav {
     display: flex-box;
     width: 100%;
     height: fit-content;
-    top: 0;
-    padding-bottom: 40em;
 }
 
 .home_nav_list {
@@ -230,39 +228,24 @@ a {
     /*make sure you have this one, so you can make the list different*/
 }
 
-/*FLOAT: alle nav_item orienteres fra overste i html til siste og at orienteringen er horisontal*/
-.home_nav_item {
-    margin: 1em;
-    height: 6em;
-    outline: 0.1em solid #F29580;
-    vertical-align: middle;
-}
-
-/* a i nav_item skal se ut folgende: */
+/* button i nav_item skal se ut folgende: */
 .home_nav_item button {
+    margin-top: 0.5rem;
     width: 100%;
-    height: 100%;
+    height: 4rem;
     color: #F29580;
     background-color: transparent;
     text-decoration: none;
     /*take away the underline*/
     text-align: left;
-    font-size: 2em;
-    border-style: none;
-}
+    font-size: 1.5rem;
+    border: 0.1rem solid #F29580;;
 
-/* The page (a-link) in menu being hovered over */
+}
+/* The page (button) in menu being hovered over */
 button:hover {
-    color: #32598C;
+    color: white;
     background-color: #F29580;
-}
-
-/*Main content*/
-.main_content {
-    padding: 1.5em;
-    flex: 1;
-    /*1 = fills whole space left if no flex value are given to children*/
-    overflow: auto;
 }
 
 .grid {
@@ -277,20 +260,19 @@ button:hover {
     /*Make the setup for 2 column*/
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
 }
 
 .pb {
     max-height: 20rem;
+    min-width: 100%;
+    padding: 1rem;
     border-radius: 1rem;
-    object-fit: scale-down;
 }
 
 .about_text {
     max-width: 100%;
     color: #F29580;
-    margin: 1rem;
 }
 
 /*Drawings.html - img slideshow*/
@@ -319,7 +301,7 @@ button:hover {
 
 /*Whitespace canvas so all pages are the same size*/
 .whitespace {
-    padding: 20em;
+    padding: 5rem;
 }
 
 #ws_where {
